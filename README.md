@@ -1,2 +1,6 @@
 # Concert-Exporter
 Export Parameters from a Concert file
+
+I was bored one day and decided to open a Concert file on my linux machine, and to my complete unsurpise I discover it's just a .tar file wrapped in a zip file with a custom extension (.ccz). Contained within the tar file are a number of .mlu files for each indiviudal node (and maybe other things), which I haven't got around to reverse engineering yet. However, each dimmer is listed as a file with the type of dimmer, followed by an integer, with the extension .etc. For example `Sensor3_0.etc`. These .etc files are simply xml files that describes how each dimmer channel should behave, from dimming curve to power pass through, to independent power. It also contains information on the user specified parameters for each channel, and what those user parameters are named. It also describes each dimming curve, and near enough every aspect that can be configured, depending on your dimmer.
+
+I am making this projet NOT to replace Concert, simply so I can feed my concert files to this software, and have it create a load of documentation if I don't have access to a vectorworks file to export paperwork from, or whatever other situation means I have a functional Concert file with Channel numbers and DMX addresses, but no other means to create paperwork.
